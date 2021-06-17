@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import Counter from './Components/test';
 
 class App extends React.Component {
   constructor(props) {
@@ -9,17 +10,15 @@ class App extends React.Component {
     }
 
     this.handleChange = this.handleChange.bind(this);
-    this.handleAddButton = this.handleAddButton.bind(this);
-    this.handleSubtractButton = this.handleSubtractButton.bind(this);
+    //this.handleAddButton = this.handleAddButton.bind(this);
+    //this.handleSubtractButton = this.handleSubtractButton.bind(this);
   }
   
-  handleChange(event) {
-    this.setState({
-      [event.target.name] : event.target.value
-    })
+  handleChange = (humanGuess) => {
+    this.setState({ humanGuess })
   }
 
-  handleAddButton() {
+  /*handleAddButton() {
     let addGuess = this.state.humanGuess;
     this.setState({
       humanGuess: +addGuess + 1
@@ -31,7 +30,7 @@ class App extends React.Component {
     this.setState({
       humanGuess: +minusGuess - 1
     })
-  }
+  }*/
 
   render() {
     return (
@@ -61,6 +60,10 @@ class App extends React.Component {
               <p className="score-label">Score: <span id="human-score">0</span></p>
             </div>
 
+            <Counter
+            onUpdate={this.handleChange} />
+            
+            <p>{this.state.humanGuess}</p>
             <input 
               type="number" 
               id="human-guess"
@@ -69,7 +72,7 @@ class App extends React.Component {
               max={9}
               
               value={this.state.humanGuess}
-              onChange={this.handleChange} />
+              />
 
             <div className="number-controls">
               <button className="number-control left" id="subtract" onClick={this.handleSubtractButton}>-</button>
@@ -97,9 +100,11 @@ class App extends React.Component {
             <p>Click "Next Round" to play again.</p>
           </div>
         </div>
+        
       </div>
     )
   }
+  
 }
 
 export default App;
