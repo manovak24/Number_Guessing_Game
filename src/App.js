@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import Counter from './Components/test';
+import Game from './Components/game';
 
 class App extends React.Component {
   constructor(props) {
@@ -39,10 +39,7 @@ class App extends React.Component {
           <h1>Number Guessing Game</h1>
         </header>
 
-        <div className="rounds">
-          <p className="Round-label">Round <span id="round-number">1</span></p>
-          <p className="guess-label">Taret Number: <span id="target-number">?</span></p>
-        </div>
+        
 
         <div className="Guesing-area">
           <div className="guess computer-guess">
@@ -60,30 +57,12 @@ class App extends React.Component {
               <p className="score-label">Score: <span id="human-score">0</span></p>
             </div>
 
-            <Counter
-            onUpdate={this.handleChange} />
+            <Game />
             
-            <p>{this.state.humanGuess}</p>
-            <input 
-              type="number" 
-              id="human-guess"
-              name='humanGuess'
-              min={0}
-              max={9}
-              
-              value={this.state.humanGuess}
-              />
 
-            <div className="number-controls">
-              <button className="number-control left" id="subtract" onClick={this.handleSubtractButton}>-</button>
-              <button className="number-control right" id="add" onClick={this.handleAddButton}>+</button>
-            </div>
-            <button className="button" id="guess">Make a Guess</button>
+            
+            
           </div>
-        </div>
-
-        <div className="next-round-container">
-          <button className="button" id="next-round" disabled>Next Round</button>
         </div>
 
         <div className="instructions">
