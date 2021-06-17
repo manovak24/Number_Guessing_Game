@@ -42,27 +42,15 @@ class App extends React.Component {
         
 
         <div className="Guesing-area">
-          <div className="guess computer-guess">
-            <div className="guess-title">
-              <p className="guess-label">Computer</p>
-              <p className="score-labe">Score: <span id="computer-score">0</span></p>
-            </div>
-            <p id="computer-guess">?</p>
-            <p className="winning-text" id="computer-wins"></p>
-          </div>
+          
 
-          <div className="guess human-guess">
-            <div className="guess-title">
-              <p className="guess-label">You</p>
-              <p className="score-label">Score: <span id="human-score">0</span></p>
-            </div>
+          
 
             <Game />
             
 
             
             
-          </div>
         </div>
 
         <div className="instructions">
