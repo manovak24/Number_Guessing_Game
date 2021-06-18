@@ -4,6 +4,7 @@ export default function Game(props) {
     const [clickCount, setClickCount] = useState(0);
     const [round, setRound] = useState(1);
     const [target, setTarget] = useState();
+    const [computerGuess, setComputerGuess] = useState();
 
     const handlePlus = () => {
         setClickCount((prevClickCount) => prevClickCount + 1)
@@ -21,6 +22,15 @@ export default function Game(props) {
         setTarget(Math.floor(Math.random() * 10));
     }
 
+    const generateComputerGuess = () => {
+        setComputerGuess(Math.floor(Math.random() * 10))
+    }
+
+    function randomGenerator() {
+        generateTarget();
+        generateComputerGuess();
+    }
+
 
   return (
     <div className="Guesing-area">
@@ -34,7 +44,7 @@ export default function Game(props) {
               <p className="guess-label">Computer</p>
               <p className="score-labe">Score: <span id="computer-score">0</span></p>
             </div>
-            <p id="computer-guess">COMPUTER GUESS GOES HERE</p>
+            <p id="computer-guess">Computer Guess: {computerGuess}</p>
             <p className="winning-text" id="computer-wins"></p>
         </div>
 
@@ -59,7 +69,7 @@ export default function Game(props) {
                 onClick={handleMinus} 
                 disabled={clickCount <= 0}>-</button>
             </div>
-            <button className="button" id="guess" onClick={generateTarget}>Make a Guess!</button>
+            <button className="button" id="guess" onClick={randomGenerator}>Make a Guess!</button>
         </div>
 
         <div className="next-round-container" onClick={roundNumber}>

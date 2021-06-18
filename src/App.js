@@ -3,35 +3,7 @@ import './App.css';
 import Game from './Components/game';
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      humanGuess: ''
-    }
-
-    this.handleChange = this.handleChange.bind(this);
-    //this.handleAddButton = this.handleAddButton.bind(this);
-    //this.handleSubtractButton = this.handleSubtractButton.bind(this);
-  }
   
-  handleChange = (humanGuess) => {
-    this.setState({ humanGuess })
-  }
-
-  /*handleAddButton() {
-    let addGuess = this.state.humanGuess;
-    this.setState({
-      humanGuess: +addGuess + 1
-    })
-  }
-
-  handleSubtractButton() {
-    let minusGuess = this.state.humanGuess;
-    this.setState({
-      humanGuess: +minusGuess - 1
-    })
-  }*/
-
   render() {
     return (
       <div className="game-container">
@@ -39,19 +11,7 @@ class App extends React.Component {
           <h1>Number Guessing Game</h1>
         </header>
 
-        
-
-        <div className="Guesing-area">
-          
-
-          
-
-            <Game />
-            
-
-            
-            
-        </div>
+        <Game />
 
         <div className="instructions">
           <div className="instruction">
