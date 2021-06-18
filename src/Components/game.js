@@ -43,9 +43,9 @@ export default function Game(props) {
    const compareGuesses = (humanGuess, computerGuess, target) => {
        const humanDifference = Math.abs(target - humanGuess);
        const computerDifference = Math.abs(target - computerGuess);
-       if(computerDifference > humanDifference) {
+       if(humanDifference > computerDifference) {
            return setComputerScore((prevComputerScore) => prevComputerScore + 1);
-       } else if (humanDifference > computerDifference) {
+       } else if (computerDifference > humanDifference) {
            return setHumanScore((prevHumanScore) => prevHumanScore + 1);
        }
        
