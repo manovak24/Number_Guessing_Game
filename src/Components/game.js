@@ -103,12 +103,12 @@ export default function Game(props) {
                 className="number-control left" 
                 id="subtract" 
                 onClick={handlePlus} 
-                disabled={humanGuess > 9}>+</button>
+                disabled={humanGuess > 9 || disable}>+</button>
                 <button 
                 className="number-control right" 
                 id="add" 
                 onClick={handleMinus} 
-                disabled={humanGuess <= 0}>-</button>
+                disabled={humanGuess <= 0 || disable}>-</button>
             </div>
             <button className="button" id="guess" onClick={runGame} disabled={disable}>Make a Guess!</button>
             <button className="button" id="guess" onClick={handleGame}>Compare!</button>
