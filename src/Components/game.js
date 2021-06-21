@@ -31,50 +31,45 @@ export default function Game(props) {
         setComputerGuess(Math.floor(Math.random() * 10))
     }
 
-    function handleRetry() {
-        sethumanGuess(0);
-        setRound(1);
-        setTarget('?');
-        setComputerGuess('?');
-        setHumanScore(0);
-        setComputerScore(0);
-    }
+    
 
-   const compareGuesses = (humanGuess, computerGuess, target) => {
-       const humanDifference = Math.abs(target - humanGuess);
-       const computerDifference = Math.abs(target - computerGuess);
-       if(humanDifference > computerDifference) {
-           return setComputerScore((prevComputerScore) => prevComputerScore + 1);
-       } else if (computerDifference > humanDifference) {
-           return setHumanScore((prevHumanScore) => prevHumanScore + 1);
+   const handleGame = (props) => {
+       let humanDiff = Math.abs(target - humanGuess);
+       let computerDiff = Math.abs(target - computerGuess);
+       if (humanDiff > computerDiff) {
+            setComputerScore((prevComputerScore) => prevComputerScore + 1);
+            window.alert('Computer wins!');
+       } else if (computerDiff > humanDiff) {
+            setHumanScore((prevHumanScore) => prevHumanScore + 1);
+            window.alert('Human wins!');
+       } else if (computerDiff === humanDiff) {
+           window.alert('Tie')
        }
-       
+       console.log(humanDiff);
+       console.log(computerDiff);
    }
 
-   /*const humanIsWinner = compareGuesses(humanGuess, computerGuess, target);
-   const winner = humanIsWinner ? 'human' : 'computer';
-
-   const updateScore = winner => {
-       if(winner === 'human') {
-           setHumanScore((prevHumanScore) => prevHumanScore + 1);
-       } else if (winner === 'computer') {
-           setComputerScore((prevComputerScore) => prevComputerScore + 1);
-       }
-   }*/
 
    function runGame() {
        generateTarget();
        generateComputerGuess();
-       compareGuesses(humanGuess, computerGuess, target);
+       handleGame();
    }
 
-   
+   function handleRetry() {
+    sethumanGuess(0);
+    setRound(1);
+    setTarget('?');
+    setComputerGuess('?');
+    setHumanScore(0);
+    setComputerScore(0);
+}
 
   return (
     <div className="Guesing-area">
         <div className="rounds">
           <p className="Round-label">Round: {round}</p>
-          <p className="guess-label">Taret Number: {target}</p>
+          <p className="guess-label" >Taret Number: {target}</p>
         </div>
 
         <div className="guess computer-guess">
