@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
 export default function Game(props) {
+    const [disable, setDisable] = useState(false);
     const [round, setRound] = useState(1);
     const [target, setTarget] = useState('?');
     const [humanGuess, sethumanGuess] = useState(0);
@@ -16,8 +17,13 @@ export default function Game(props) {
         sethumanGuess((prevHumanGuess) => prevHumanGuess - 1)
     }
 
+    const disableButton = () => {
+        setDisable(true);
+    }
+
     const roundNumber = () => {
         setRound((prevRound) => prevRound + 1);
+        setDisable(false);
         sethumanGuess(0);
         setTarget('?');
         setComputerGuess('?');
@@ -54,6 +60,7 @@ export default function Game(props) {
        generateTarget();
        generateComputerGuess();
        handleGame();
+       disableButton();
    }
 
    function handleRetry() {
@@ -63,6 +70,7 @@ export default function Game(props) {
     setComputerGuess('?');
     setHumanScore(0);
     setComputerScore(0);
+    setDisable(false);
 }
 
   return (
@@ -102,7 +110,8 @@ export default function Game(props) {
                 onClick={handleMinus} 
                 disabled={humanGuess <= 0}>-</button>
             </div>
-            <button className="button" id="guess" onClick={runGame}>Make a Guess!</button>
+            <button className="button" id="guess" onClick={runGame} disabled={disable}>Make a Guess!</button>
+            <button className="button" id="guess" onClick={handleGame}>Compare!</button>
         </div>
 
         <div className="next-round-container" >
