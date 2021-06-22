@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Swal from 'sweetalert2';
+import './game.css';
 
 export default function Game(props) {
     const [disable, setDisable] = useState(false);
@@ -81,7 +82,7 @@ export default function Game(props) {
 }
 
   return (
-    <div className="Guesing-area">
+    <div className="guessing-area">
         <div className="rounds">
           <p className="Round-label">Round: {round}</p>
           <p className="guess-label" >Taret Number: {target}</p>
