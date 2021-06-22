@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Swal from 'sweetalert2';
 
 export default function Game(props) {
     const [disable, setDisable] = useState(false);
@@ -44,10 +45,16 @@ export default function Game(props) {
        let computerDiff = Math.abs(target - computerGuess);
        if (humanDiff > computerDiff) {
             setComputerScore((prevComputerScore) => prevComputerScore + 1);
-            window.alert('Computer wins!');
+            Swal.fire({
+                title: 'Computer Wins!',
+                icon: 'error'
+            });
        } else if (computerDiff > humanDiff) {
             setHumanScore((prevHumanScore) => prevHumanScore + 1);
-            window.alert('Human wins!');
+            Swal.fire({
+                title: 'Human Wins!',
+                icon: 'success'
+            });
        } else if (computerDiff === humanDiff) {
            window.alert('Tie')
        }
