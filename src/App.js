@@ -14,6 +14,8 @@ class App extends React.Component {
           </header>
 
           <Game />
+          
+        </div>
 
           <div className="instructions">
             <div className="instruction">
@@ -29,7 +31,6 @@ class App extends React.Component {
               <p>Click "Next Round" to play again.</p>
             </div>
           </div>
-        </div>
 
       </div>
     )

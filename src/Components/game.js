@@ -82,49 +82,53 @@ export default function Game(props) {
 }
 
   return (
-    <div className="guessing-area">
+    <div className="game-area">
+
         <div className="rounds">
-          <p className="Round-label">Round: {round}</p>
-          <p className="guess-label" >Taret Number: {target}</p>
+            <p className="Round-label">Round: {round}</p>
+            <p className="guess-label" >Taret Number: {target}</p>
         </div>
-
-        <div className="guess computer-guess">
-            <div className="guess-title">
-              <p className="guess-label">Computer</p>
-              <p className="score-labe">Score: {computerScore}</p>
+      
+        <div className="guessing-area">
+            <div className="guess computer-guess">
+                <div className="guess-title">
+                <p className="guess-label">Computer</p>
+                <p className="score-labe">Score: {computerScore}</p>
+                </div>
+                <p id="computer-guess">Computer Guess: {computerGuess}</p>
+                <p className="winning-text" id="computer-wins"></p>
             </div>
-            <p id="computer-guess">Computer Guess: {computerGuess}</p>
-            <p className="winning-text" id="computer-wins"></p>
+
+
+            <div className="guess human-guess">
+                <div className="guess-title">
+                <p className="guess-label">You</p>
+                <p className="score-label">Score: {humanScore}</p>
+                </div>
+                <div>
+                    <input id="human-guess" value={humanGuess} />
+                </div>
+                <div className="number-controls">
+                    <button
+                    className="number-control left" 
+                    id="subtract" 
+                    onClick={handlePlus} 
+                    disabled={humanGuess > 9 || disable}>+</button>
+                    <button 
+                    className="number-control right" 
+                    id="add" 
+                    onClick={handleMinus} 
+                    disabled={humanGuess <= 0 || disable}>-</button>
+                </div>
+                <button className="button" id="guess" onClick={runGame} disabled={disable}>Make a Guess!</button>
+                <button className="button" id="guess" onClick={handleGame}>Compare!</button>
+            </div>
+
+            
         </div>
-
-
-        <div className="guess human-guess">
-            <div className="guess-title">
-              <p className="guess-label">You</p>
-              <p className="score-label">Score: {humanScore}</p>
-            </div>
-            <div>
-                <input id="human-guess" value={humanGuess} />
-            </div>
-            <div className="number-controls">
-                <button
-                className="number-control left" 
-                id="subtract" 
-                onClick={handlePlus} 
-                disabled={humanGuess > 9 || disable}>+</button>
-                <button 
-                className="number-control right" 
-                id="add" 
-                onClick={handleMinus} 
-                disabled={humanGuess <= 0 || disable}>-</button>
-            </div>
-            <button className="button" id="guess" onClick={runGame} disabled={disable}>Make a Guess!</button>
-            <button className="button" id="guess" onClick={handleGame}>Compare!</button>
-        </div>
-
         <div className="next-round-container" >
-            <button className="button" id="next-round" onClick={roundNumber}>Next Round</button>
-            <button className="button" id="next-round" onClick={handleRetry}>Start Over</button>
+                <button className="button" id="next-round" onClick={roundNumber}>Next Round</button>
+                <button className="button" id="next-round" onClick={handleRetry}>Start Over</button>
         </div>
     </div>
   );

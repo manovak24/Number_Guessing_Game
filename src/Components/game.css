@@ -121,12 +121,12 @@
 }
 
 #guess {
-    padding: 20px;
     width: 169px;
-    height: 59px;
-    border: none;
+    height: 2rem;
+    border-radius: 10px;
     font-weight: 700;
     font-size: 14px;
+    margin-bottom: .2rem;
 }
 
 input[type=number]::-webkit-inner-spin-button {
