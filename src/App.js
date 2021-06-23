@@ -10,7 +10,7 @@ class App extends React.Component {
 
         <div className="game-container">
           <header>
-            <h1>Number Guessing Game</h1>
+            <h1 className="title">Number Guessing Game</h1>
           </header>
 
           <Game />
