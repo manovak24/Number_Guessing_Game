@@ -20,15 +20,19 @@ class App extends React.Component {
           <div className="instructions">
             <div className="instruction">
               <h3>Step 1</h3>
-              <p>Input a number between 0 and 9</p>
+              <p>Select a number between 1 and 10</p>
             </div>
             <div className="instruction">
               <h3>Step 2</h3>
-              <p>Click "Make a Guess" to submit your guess and see who won the round.</p>
+              <p>Click "Make a Guess" to submit your guess</p>
             </div>
             <div className="instruction">
               <h3>Step 3</h3>
-              <p>Click "Next Round" to play again.</p>
+              <p>Click "Compare!" to determine the winner</p>
+            </div>
+            <div className="instruction">
+              <h3>Step 4</h3>
+              <p>Click "Next Round" to advance to next round</p>
             </div>
           </div>
 
