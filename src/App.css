@@ -1,11 +1,11 @@
 * {
     box-sizing: border-box;
+    font-family: 'Fira Sans Condensed', sans-serif;
 }
 
 .body {
     margin: 0 auto;
-    padding: 3px;
-    background-color: #fff;
+    background-color: rgb(8, 196, 253);
 }
 
 .game-container {
@@ -16,7 +16,10 @@
 
 .title {
     display: flex;
-    justify-content: center
+    justify-content: center;
+    margin-top: 0;
+    padding-top: 2rem;
+    height: auto;
 }
 
 .instructions {
