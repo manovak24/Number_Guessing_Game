@@ -148,3 +148,8 @@ input[type=number]::-webkit-inner-spin-button {
     color: #a0a0a0;
     cursor: default;
 }
+
+.intro {
+    padding: .2rem;
+    font-weight: 700;
+}
