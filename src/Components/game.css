@@ -12,19 +12,28 @@
 }
   
 .guess {
-    min-width: 303px;
+    width: 16rem;
     height: 328px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 19px;
+    padding: 1rem;
+    margin: .5rem;
 }
 
 .guessing-area {
     display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
-    margin-bottom: 60px;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 550px) {
+    .guessing-area {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    
 }
   
 .guess-title {
@@ -115,7 +124,13 @@
 }
 
 .button {
-    background-color: #4c7ef3;
+    background: #f93dff; /* fallback for old browsers */
+	background: -webkit-linear-gradient(
+		to right,
+		#f93dff,
+		#2f44ff
+	); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(45deg, #f93dff, #2f44ff);
     color: #fff;
     cursor: pointer;
 }
