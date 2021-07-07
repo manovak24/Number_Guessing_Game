@@ -85,7 +85,6 @@ export default function Game(props) {
     <div className="game-area">
 
         <div className="rounds">
-            <p className="intro">*Instructions can be found at the bottom of the page*</p>
             <p className="intro Round-label">Round: {round}</p>
             <p className="intro guess-label" >Taret Number: {target}</p>
             
