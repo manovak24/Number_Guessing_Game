@@ -10,12 +10,6 @@ class App extends React.Component {
               
         <h1 className="title">Number Guessing Game</h1>
 
-        <div className="game-container">
-          
-          <Game />
-          
-        </div>
-
         <div className="instructions">
           <div className="instruction">
             <h3>Step 1</h3>
@@ -34,6 +28,14 @@ class App extends React.Component {
             <p>Click "Next Round" to advance to next round</p>
           </div>
         </div>
+
+        <div className="game-container">
+          
+          <Game />
+          
+        </div>
+
+       
 
       </div>
     )

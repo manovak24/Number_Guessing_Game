@@ -5,7 +5,7 @@
 
 .body {
     margin: 0 auto;
-    background-color: rgb(71, 221, 41);
+    background: linear-gradient(180deg, #38ce1a, #2f44ff);
 }
 
 .game-container {
@@ -23,24 +23,11 @@
     padding-bottom: 2rem;
     font-size: 4rem;
     font-weight: 800;
-    background-color: #aeff51;
-    background-image: linear-gradient(45deg, #f93dff, #2f44ff);
-    background-size: 100%;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -webkit-text-fill-color: transparent; 
-    -moz-text-fill-color: transparent;
+    color: white;
     
 }
 
 .instructions {
-    background: #f93dff; /* fallback for old browsers */
-	background: -webkit-linear-gradient(
-		to right,
-		#f93dff,
-		#2f44ff
-	); /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(45deg, #f93dff, #2f44ff);
     width: 100%;
     display: flex;
     justify-content: space-evenly;
@@ -58,7 +45,7 @@
     margin: 1rem;
     padding: 2px;
     text-align: center;
-    font-weight: 600;
+    font-weight: 800;
     color: white;
 }
   
