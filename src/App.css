@@ -12,6 +12,7 @@
 		#2f44ff
 	); /* Chrome 10-25, Safari 5.1-6 */
 	background: linear-gradient(180deg, #27bb09, #2f44ff);
+    min-height: 100vh;
 }
 
 .game-container {
@@ -49,7 +50,7 @@
 .instruction {
     width: 180px;
     text-align: center;
-    font-weight: 800;
+    font-weight: 700;
     color: white;
     margin: .5rem;
 }
