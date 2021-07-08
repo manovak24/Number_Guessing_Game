@@ -31,7 +31,7 @@ class App extends React.Component {
 
         <div className="game-container">
           
-          <Game />
+          
           
         </div>
 
