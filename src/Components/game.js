@@ -85,8 +85,8 @@ export default function Game(props) {
     <div className="game-area">
 
         <div className="rounds">
-            <p className="intro Round-label">Round: {round}</p>
-            <p className="intro guess-label" >Taret Number: {target}</p>
+            <p className="intro round-label">Round: {round}</p>
+            <p className="intro guess-label target">Taret Number: {target}</p>
             
         </div>
       
@@ -113,13 +113,13 @@ export default function Game(props) {
                     <button
                     className="number-control left" 
                     id="subtract" 
-                    onClick={handlePlus} 
-                    disabled={humanGuess > 9 || disable}>+</button>
-                    <button 
-                    className="number-control right" 
-                    id="add" 
                     onClick={handleMinus} 
                     disabled={humanGuess <= 0 || disable}>-</button>
+                    <button 
+                    className="number-control right" 
+                    id="add"
+                    onClick={handlePlus} 
+                    disabled={humanGuess > 9 || disable}>+</button>
                 </div>
                 <button className="button" id="guess" onClick={runGame} disabled={disable}>Make a Guess!</button>
                 <button className="button" id="guess" onClick={handleGame}>Compare!</button>

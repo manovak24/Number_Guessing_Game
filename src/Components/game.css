@@ -7,8 +7,9 @@
 
 .round-label {
     font-size: 30px;
-    font-weight: 700;
+    font-weight: 800;
     margin-bottom: 0px;
+    color: white;
 }
   
 .guess {
@@ -49,6 +50,26 @@
     font-weight: 700;
     margin: 0;
 }
+
+.target {
+    color: white;
+    background: #f93dff; /* fallback for old browsers */
+	background: -webkit-linear-gradient(
+		to right,
+		#f93dff,
+		#2f44ff
+	); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(45deg, #f93dff, #2f44ff);
+    color: #fff;
+    width: 10rem;
+    height: 4rem;
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
   
 .score-label {
     font-size: 14px;
