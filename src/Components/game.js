@@ -87,24 +87,22 @@ export default function Game(props) {
         <div className="rounds">
             <p className="intro round-label">Round: {round}</p>
             <p className="intro guess-label target">Taret Number: {target}</p>
-            
         </div>
       
         <div className="guessing-area">
             <div className="guess computer-guess">
                 <div className="guess-title">
-                <p className="guess-label">Computer</p>
-                <p className="score-labe">Score: {computerScore}</p>
+                    <p className="guess-label">Computer</p>
+                    <p className="score-label">Score: {computerScore}</p>
                 </div>
                 <p id="computer-guess">Computer Guess: {computerGuess}</p>
-                <p className="winning-text" id="computer-wins"></p>
             </div>
 
 
             <div className="guess human-guess">
                 <div className="guess-title">
-                <p className="guess-label">You</p>
-                <p className="score-label">Score: {humanScore}</p>
+                    <p className="guess-label">You</p>
+                    <p className="score-label">Score: {humanScore}</p>
                 </div>
                 <div>
                     <input id="human-guess" value={humanGuess} />
@@ -124,12 +122,11 @@ export default function Game(props) {
                 <button className="button" id="guess" onClick={runGame} disabled={disable}>Make a Guess!</button>
                 <button className="button" id="guess" onClick={handleGame}>Compare!</button>
             </div>
-
-            
         </div>
+
         <div className="next-round-container" >
-                <button className="button" id="next-round" onClick={roundNumber}>Next Round</button>
-                <button className="button" id="next-round" onClick={handleRetry}>Start Over</button>
+            <button className="button" id="next-round" onClick={roundNumber}>Next Round</button>
+            <button className="button" id="next-round" onClick={handleRetry}>Start Over</button>
         </div>
     </div>
   );
