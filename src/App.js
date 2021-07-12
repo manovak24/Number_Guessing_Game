@@ -9,6 +9,7 @@ class App extends React.Component {
       <div className="body">
               
         <h1 className="title">Number Guessing Game</h1>
+        <h1>TESTING NETLIFY</h1>
 
         <div className="instructions">
           <div className="instruction">
