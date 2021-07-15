@@ -6,7 +6,6 @@
 * [Screenshots](#screenshots)
 * [Technologies](#technologies)
 * [Setup](#setup)
-* [Features](#features)
 * [Status](#status)
 * [Contact](#contact)
 
@@ -25,7 +24,7 @@
 
 
 ## Setup
-Please follow link to website - https://manovak24.github.io/credit_card_validator/
+Please follow link to website - https://ecstatic-banach-130d97.netlify.app
 
 ## Code Examples
 ```js
@@ -52,13 +51,9 @@ Please follow link to website - https://manovak24.github.io/credit_card_validato
     }
  ```   
 
-## Features
-List of features ready
-* Web app validates credit card numbers
-
 
 ## Status
-Project is: _in progress_
+Project is: _finished_
 
 ## Contact
 Created by [@manovak24](https://github.com/manovak24) - feel free to contact me!
