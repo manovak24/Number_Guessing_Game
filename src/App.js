@@ -8,7 +8,6 @@ class App extends React.Component {
       <GameContainer />
     )
   }
-  
 }
 
 export default App;
