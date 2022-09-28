@@ -9,14 +9,8 @@
     font-size: 30px;
     font-weight: 800;
     margin-bottom: 0px;
-    color: white;
-    background: #f93dff; /* fallback for old browsers */
-	background: -webkit-linear-gradient(
-		to right,
-		#f93dff,
-		#2f44ff
-	); /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(45deg, #f93dff, #2f44ff);
+    color: #2f44ff;
+    background-color: #fff;
     width: 10rem;
     height: 4rem;
     border-radius: 10px;

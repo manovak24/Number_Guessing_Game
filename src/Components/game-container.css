@@ -5,13 +5,7 @@
 
 .body {
     min-height: 100%;
-    background: #2f44ff; /* fallback for old browsers */
-	background: -webkit-linear-gradient(
-		to right,
-		#27bb09,
-		#2f44ff
-	); /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(180deg, #27bb09, #2f44ff);
+    background-color: blue;
     min-height: 100vh;
     padding-bottom: 4rem;
 }
